@@ -14,10 +14,10 @@ member2 = Member.new({
 
   member1.save()
   member2.save()
-  member1.premium = false
-  member1.name = 'John Wales'
-  member1.update()
-  member2.delete()
+  # member1.premium = false
+  # member1.name = 'John Wales'
+  # member1.update()
+  # member2.delete()
 
 gym_class1 = GymClass.new({
     'name' => 'Yoga',
@@ -40,9 +40,9 @@ gym_class3 = GymClass.new({
 gym_class1.save()
 gym_class2.save()
 gym_class3.save()
-gym_class3.max_capacity = 25
-gym_class3.update()
-gym_class3.delete()
+# gym_class3.max_capacity = 25
+# gym_class3.update()
+# gym_class3.delete()
 
 binding.pry
 nil
