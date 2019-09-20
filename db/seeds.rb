@@ -1,5 +1,6 @@
 require_relative('../models/member.rb')
 require_relative('../models/gym_class.rb')
+require_relative('../models/appointment.rb')
 require('pry')
 
 member1 = Member.new({
@@ -43,6 +44,19 @@ gym_class3.save()
 # gym_class3.max_capacity = 25
 # gym_class3.update()
 # gym_class3.delete()
+
+appointment1 = Appointment.new({
+  'member_id' => member1.id,
+  'class_id' => gym_class1.id
+  })
+
+appointment2 = Appointment.new({
+  'member_id' => member2.id,
+  'class_id' => gym_class2.id
+  })
+
+appointment1.save()
+appointment2.save()
 
 binding.pry
 nil
