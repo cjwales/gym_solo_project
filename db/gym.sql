@@ -1,4 +1,4 @@
-DROP TABLE members_in_classes;
+DROP TABLE appointments;
 DROP TABLE members;
 DROP TABLE gym_classes;
 
@@ -15,7 +15,7 @@ CREATE TABLE gym_classes(
   max_capacity INT2
 );
 
-CREATE TABLE members_in_classes(
+CREATE TABLE appointments(
   id SERIAL8 PRIMARY KEY,
   member_id INT8 REFERENCES members(id) ON DELETE CASCADE,
   class_id INT8 REFERENCES gym_classes(id) ON DELETE CASCADE
