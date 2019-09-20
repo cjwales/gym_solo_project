@@ -31,6 +31,13 @@ class Member
     SqlRunner.run(sql, values)
   end
 
+  def gym_classes()
+    sql = "SELECT gym_classes.* FROM gym_classes INNER JOIN appointments ON appointments.class_id = gym_classes.id WHERE member_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |gym_class| GymClass.new(gym_class) }
+  end
+
   def self.all()
     sql = "SELECT * FROM members"
     members = SqlRunner.run(sql)
