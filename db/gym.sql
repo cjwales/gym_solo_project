@@ -1,5 +1,6 @@
-DROP TABLE classes;
+DROP TABLE members_in_classes;
 DROP TABLE members;
+DROP TABLE gym_classes;
 
 CREATE TABLE members(
   id SERIAL8 PRIMARY KEY,

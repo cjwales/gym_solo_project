@@ -34,7 +34,7 @@ class Member
   def self.all()
     sql = "SELECT * FROM members"
     members = SqlRunner.run(sql)
-    result = members.map { |member| Member.new(member)}
+    result = members.map { |member| Member.new(member) }
     return result
   end
 
