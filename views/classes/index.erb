@@ -1,0 +1,6 @@
+<a href="/classes/new">Create Class</a>
+<% for gym_class in @gym_classes %>
+<h5>Name: <%= gym_class.name %> </h5>
+<h5>Start Time: <%= gym_class.start_time %></h5>
+<h5>Maximum Capacity: <%= gym_class.max_capacity %></h5>
+<% end %>
