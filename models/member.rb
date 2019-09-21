@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('./gym_class.rb')
 require('pry')
 
 class Member
@@ -70,5 +71,3 @@ class Member
 
 
 end
-# binding.pry
-# nil

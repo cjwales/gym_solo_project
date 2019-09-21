@@ -3,6 +3,7 @@ require('sinatra/contrib/all')
 
 require_relative('./models/member.rb')
 require_relative('./models/gym_class.rb')
+require_relative('./models/booking.rb')
 also_reload('./models/*')
 
 get '/' do # HOME
@@ -56,6 +57,7 @@ end
 
 get '/classes/:id' do # SHOW
   @gym_class = GymClass.find(params[:id])
+  @bookings = Booking.find_all(params[:id])
   erb(:"classes/show")
 end
 
@@ -79,4 +81,26 @@ post '/classes/:id/delete' do # DELETE
   gym_class = GymClass.find(params[:id])
   gym_class.delete()
   redirect to '/classes'
+end
+
+get '/bookings' do # INDEX
+  @bookings = Booking.all
+  erb (:"bookings/index")
+end
+
+get '/bookings/new' do # NEW
+  @gym_classes = GymClass.all
+  @members = Member.all
+  erb(:"bookings/new")
+end
+
+post '/bookings' do # CREATE
+  booking = Booking.new(params)
+  booking.save
+  redirect to '/bookings'
+end
+
+post '/bookings/:id/delete' do # DELETE
+  Booking.delete(params[:id])
+  redirect to '/bookings'
 end
