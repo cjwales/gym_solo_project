@@ -53,6 +53,21 @@ class Member
     return result
   end
 
+  # def get_premium()
+  #   if @member.premium == true
+  #     return "Premium"
+  #   else
+  #     return "Basic"
+  #   end
+  # end
+
+  # def display_premium()
+  #   if @member.premium == true
+  #     return "Premium Member"
+  #   elsif return "Basic Member"
+  #   end
+  # end
+
 
 end
 # binding.pry
