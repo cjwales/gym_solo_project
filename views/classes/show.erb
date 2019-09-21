@@ -1,0 +1,8 @@
+<p>Name: <%= @gym_class.name %></p>
+<p>Start Time: <%= @gym_class.start_time %></p>
+<p>Maximum Capacity: <%= @gym_class.max_capacity %></p>
+<p><a href="/classes/<%= @gym_class.id %>/edit">Edit Class Details</a></p>
+<form action="/classes/<%= @gym_class.id %>/delete" method="post">
+  <input type="submit" value="Delete Class"/>
+
+</form>

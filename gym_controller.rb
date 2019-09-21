@@ -18,6 +18,11 @@ get '/members/new' do
   erb(:"members/new")
 end
 
+get '/members/:id' do
+  @member = Member.find(params[:id])
+  erb(:"members/show")
+end
+
 post '/members' do
   member = Member.new(params)
   member.save()
@@ -31,6 +36,11 @@ end
 
 get '/classes/new' do
   erb(:"classes/new")
+end
+
+get '/classes/:id' do
+  @gym_class = GymClass.find(params[:id])
+  erb(:"classes/show")
 end
 
 post '/classes' do
