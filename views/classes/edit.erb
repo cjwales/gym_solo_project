@@ -1,0 +1,10 @@
+<form action="/classes/<%= @gym_class.id %>" method="post">
+  <label for="name"></label>
+  <input type="text" name="name" value="<%= @gym_class.name %>"/>
+  <label for="start_time"></label>
+  <input type="text" name="start_time" value="<%= @gym_class.start_time %>"/>
+  <label for="max_capacity"></label>
+  <input type="number" name="max_capacity" value="<%= @gym_class.max_capacity %>"/>
+
+  <input type="submit" value="Edit Member">
+</form>

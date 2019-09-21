@@ -58,3 +58,13 @@ post '/classes' do # CREATE
   gym_class.save()
   redirect to '/classes'
 end
+
+get '/classes/:id/edit' do # EDIT
+  @gym_class = GymClass.find(params[:id])
+  erb(:"classes/edit")
+end
+
+post '/classes/:id' do # UPDATE
+  GymClass.new(params).update()
+  redirect to '/classes'
+end
