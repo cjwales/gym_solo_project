@@ -1,0 +1,10 @@
+<form action="/members/<%= @member.id %>" method="post">
+  <label for="name"></label>
+  <input type="text" name="name" value="<%= @member.name %>"/>
+  <label for="membership"></label>
+  <select name="membership" id="membership">
+    <option value="Premium" <%= "selected" if @member.membership == "Premium" %> >Premium</option>
+    <option value="Basic" <%= "selected" if @member.membership == "Basic" %> >Basic</option>
+  </select>
+  <input type="submit" value="Edit Member">
+</form>

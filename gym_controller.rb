@@ -29,6 +29,16 @@ post '/members' do # CREATE
   redirect to '/members'
 end
 
+get '/members/:id/edit' do # EDIT
+  @member = Member.find(params[:id])
+  erb(:"members/edit")
+end
+
+post '/members/:id' do # UPDATE
+  Member.new(params).update()
+  redirect to '/members'
+end
+
 get '/classes' do # INDEX
   @gym_classes = GymClass.all()
   erb(:"classes/index")
