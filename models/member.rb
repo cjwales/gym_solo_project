@@ -4,24 +4,24 @@ require('pry')
 class Member
 
   attr_reader :id
-  attr_accessor :name, :premium
+  attr_accessor :name, :membership
 
   def initialize(options)
     @id = options['id'].to_i() if options['id']
     @name = options['name']
-    @premium = options['premium']
+    @membership = options['membership']
   end
 
   def save()
-    sql = "INSERT INTO members (name, premium) VALUES ($1, $2) RETURNING id"
-    values = [@name, @premium]
+    sql = "INSERT INTO members (name, membership) VALUES ($1, $2) RETURNING id"
+    values = [@name, @membership]
     member = SqlRunner.run(sql, values).first()
     @id = member['id'].to_i()
   end
 
   def update()
-    sql = "UPDATE members SET (name, premium) = ($1, $2) WHERE id = $3"
-    values = [@name, @premium, @id]
+    sql = "UPDATE members SET (name, membership) = ($1, $2) WHERE id = $3"
+    values = [@name, @membership, @id]
     SqlRunner.run(sql, values)
   end
 

@@ -5,12 +5,12 @@ require('pry')
 
 member1 = Member.new({
   'name' => 'Christopher Wales',
-  'premium' => true
+  'membership' => 'Premium'
   })
 
 member2 = Member.new({
   'name' => 'Suzanne Taylor',
-  'premium' => false
+  'membership' => 'Basic'
   })
 
   member1.save()

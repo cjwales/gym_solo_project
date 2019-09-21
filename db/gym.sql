@@ -5,7 +5,7 @@ DROP TABLE gym_classes;
 CREATE TABLE members(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  premium BOOLEAN
+  membership VARCHAR(255)
 );
 
 CREATE TABLE gym_classes(
