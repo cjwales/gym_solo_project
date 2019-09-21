@@ -39,6 +39,12 @@ post '/members/:id' do # UPDATE
   redirect to '/members'
 end
 
+post '/members/:id/delete' do # DELETE
+  member = Member.find(params[:id])
+  member.delete()
+  redirect to '/members'
+end
+
 get '/classes' do # INDEX
   @gym_classes = GymClass.all()
   erb(:"classes/index")
@@ -66,5 +72,11 @@ end
 
 post '/classes/:id' do # UPDATE
   GymClass.new(params).update()
+  redirect to '/classes'
+end
+
+post '/classes/:id/delete' do # DELETE
+  gym_class = GymClass.find(params[:id])
+  gym_class.delete()
   redirect to '/classes'
 end
