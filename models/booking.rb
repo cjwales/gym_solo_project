@@ -35,15 +35,15 @@ class Booking
   end
 
   def get_class_size()
-    sql = "SELECT * FROM bookings WHERE class_id = $1"
+    sql = "SELECT COUNT(class_id) FROM bookings WHERE class_id = $1"
     values = [@class_id]
-    results = SqlRunner.run(sql, values)
-    return Bookings.new(results.length())
+    result = SqlRunner.run(sql, values)
+    return result
   end
 
   def self.members(id)
     sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE class_id = $1"
-    values = [@id]
+    values = [id]
     results = SqlRunner.run(sql, values)
     return results.map { |member| Member.new(member) }
   end
