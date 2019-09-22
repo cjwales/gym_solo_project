@@ -38,7 +38,7 @@ class Booking
     sql = "SELECT COUNT(class_id) FROM bookings WHERE class_id = $1"
     values = [@class_id]
     result = SqlRunner.run(sql, values)
-    return result
+    return result #.to_i() might be necessary?
   end
 
   def self.members(id)
