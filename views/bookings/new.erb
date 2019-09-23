@@ -14,7 +14,9 @@
     Select a class:
     <select name="class_id">
       <% for gym_class in @gym_classes %>
+      <% if !gym_class.full() %>
       <option value="<%= gym_class.id %>"><%= gym_class.name %></option>
+      <% end %>
       <% end %>
     </select>
   </label>

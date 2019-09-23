@@ -34,13 +34,6 @@ class Booking
     return GymClass.new(results.first())
   end
 
-  def get_class_size()
-    sql = "SELECT COUNT(class_id) FROM bookings WHERE class_id = $1"
-    values = [@class_id]
-    result = SqlRunner.run(sql, values)
-    return result #.to_i() might be necessary?
-  end
-
   def self.members(id)
     sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE class_id = $1"
     values = [id]

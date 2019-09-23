@@ -39,11 +39,16 @@ class GymClass
     return results.map { |member| Member.new(member) }
   end
 
-  def get_class_size()
-    sql = "SELECT COUNT(class_id) FROM bookings WHERE class_id = $1"
-    values = [@class_id]
-    result = SqlRunner.run(sql, values)
-    return result #.to_i() might be necessary?
+  # def get_class_size()
+  #   sql = "SELECT COUNT(class_id) FROM bookings WHERE class_id = $1"
+  #   values = [@class_id]
+  #   result = SqlRunner.run(sql, values)
+  #   # return result.first()['count'].to_i()
+  #   return result
+  # end
+
+  def full()
+    return members.count() >= @max_capacity
   end
 
   def self.all()

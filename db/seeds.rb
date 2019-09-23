@@ -13,8 +13,8 @@ member2 = Member.new({
   'membership' => 'Basic'
   })
 
-  member1.save()
-  member2.save()
+  # member1.save()
+  # member2.save()
   # member1.premium = false
   # member1.name = 'John Wales'
   # member1.update()
@@ -38,9 +38,9 @@ gym_class3 = GymClass.new({
   'max_capacity' => 15
   })
 
-gym_class1.save()
-gym_class2.save()
-gym_class3.save()
+# gym_class1.save()
+# gym_class2.save()
+# gym_class3.save()
 # gym_class3.max_capacity = 25
 # gym_class3.update()
 # gym_class3.delete()
@@ -55,8 +55,8 @@ booking2 = Booking.new({
   'class_id' => gym_class2.id
   })
 
-booking1.save()
-booking2.save()
+# booking1.save()
+# booking2.save()
 
 binding.pry
 nil
