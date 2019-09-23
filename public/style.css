@@ -1,3 +1,43 @@
-h1 {
+.nav h1 {
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.nav ul {
+  margin: 50px auto;
+  padding: 0;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  max-width: 357px;
+  text-align: center;
+}
+
+.nav li {
+  float: center;
+  display: inline-block;
+}
+
+.nav li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-family: 'Cabin', sans-serif;
+}
+
+.nav li a:hover:not(.active) {
+  color: white;
+  background-color: #008CFF;
+}
+
+.nav li a.active {
   color: blue;
+  background-color: #4CAF50;
+}
+
+p {
+  font-family: helvetica;
 }

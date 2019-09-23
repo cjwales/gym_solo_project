@@ -1,7 +1,7 @@
 <a href="/members/new">Add Member</a>
 <% for member in @members %>
-<h5>Name: <%=member.name%></h5>
-<h5>Membership: <%=member.membership%></h5>
+<p>Name: <%=member.name%></p>
+<p>Membership: <%=member.membership%></p>
 <p><a href="/members/<%= member.id %>">Show Details</a></p>
 <hr />
 <% end %>
