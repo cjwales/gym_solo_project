@@ -1,8 +1,8 @@
-<a href="/classes/new">Create Class</a>
+<a class="edit-link" href="/classes/new">Create New Class</a>
 <% for gym_class in @gym_classes %>
 <p>Name: <%= gym_class.name %> </p>
 <p>Start Time: <%= gym_class.start_time %></p>
 <p>Maximum Capacity: <%= gym_class.max_capacity %></p>
-<p><a href="/classes/<%= gym_class.id %>">Show Details</a></p>
+<p><a class="show-link" href="/classes/<%= gym_class.id %>">Show Details</a></p>
 <hr />
 <% end %>

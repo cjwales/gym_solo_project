@@ -9,8 +9,8 @@
 
 <% end %>
 </ul>
-<p><a href="/classes/<%= @gym_class.id %>/edit">Edit Class Details</a></p>
+<p><a class="edit-link" href="/classes/<%= @gym_class.id %>/edit">Edit Class Details</a></p>
 <form action="/classes/<%= @gym_class.id %>/delete" method="post">
-  <input type="submit" value="Delete Class"/>
+  <input class="delete-button" type="submit" value="Delete Class"/>
 
 </form>

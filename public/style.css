@@ -49,3 +49,63 @@ a {
 label {
   font-family: helvetica;
 }
+
+hr {
+  border: 10px solid blue;
+}
+
+.delete-button {
+  color: black;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 2px;
+  cursor: pointer;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  width: 211px;
+}
+
+.edit-link {
+  color: black;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 2px;
+  cursor: pointer;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  width: 145px;
+}
+
+.create-link {
+  color: black;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 2px;
+  cursor: pointer;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  width: 145px;
+}
+
+.show-link {
+  color: black;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 2px;
+  cursor: pointer;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  width: 145px;
+}

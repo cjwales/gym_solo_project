@@ -1,7 +1,9 @@
-<a href="/members/new">Add Member</a>
+<a class="edit-link" href="/members/new">Add New Member</a>
 <% for member in @members %>
-<p>Name: <%=member.name%></p>
-<p>Membership: <%=member.membership%></p>
-<p><a href="/members/<%= member.id %>">Show Details</a></p>
+<div class="member-index">
+  <p>Name: <%=member.name%></p>
+  <p>Membership: <%=member.membership%></p>
+  <p><a class="show-link" href="/members/<%= member.id %>">Show Details</a></p>
+</div>
 <hr />
 <% end %>

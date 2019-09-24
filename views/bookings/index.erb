@@ -1,11 +1,11 @@
-<a href="/bookings/new">Create Booking</a>
+<a class="create-link" href="/bookings/new">Create Booking</a>
 <ul>
   <% for booking in @bookings %>
   <li>
   <p><%= booking.member.name %> - <%= booking.gym_class.name %> </p>
     <p>
       <form action="/bookings/<%= booking.id %>/delete" method="POST">
-        <input type="submit" value="Delete" />
+        <input class="delete-button" type="submit" value="Delete" />
       </form>
     </p>
   </li>
