@@ -12,8 +12,14 @@ member2 = Member.new({
   'membership' => 'Basic'
   })
 
+member3 = Member.new({
+  'name' => 'Jenn Woodrow',
+  'membership' => 'Premium'
+  })
+
   member1.save()
   member2.save()
+  member3.save()
 
 gym_class1 = GymClass.new({
     'name' => 'Yoga',
@@ -47,5 +53,11 @@ booking2 = Booking.new({
   'class_id' => gym_class2.id
   })
 
+booking3 = Booking.new({
+  'member_id' => member3.id,
+  'class_id' => gym_class3.id
+  })
+
 booking1.save()
 booking2.save()
+booking3.save()
